@@ -18,6 +18,67 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'Home',
@@ -122,10 +183,10 @@ vue__WEBPACK_IMPORTED_MODULE_0__["default"].use((vuex__WEBPACK_IMPORTED_MODULE_1
 
 /***/ }),
 
-/***/ "./resources/sass/app.scss":
-/*!*********************************!*\
-  !*** ./resources/sass/app.scss ***!
-  \*********************************/
+/***/ "./resources/css/app.css":
+/*!*******************************!*\
+  !*** ./resources/css/app.css ***!
+  \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -496,9 +557,131 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n  Home\n")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex flex-col justify-center mt-10" }, [
+      _c("div", [_c("h1", [_vm._v("KANBAN BOARD")])]),
+      _vm._v(" "),
+      _c("div", { staticClass: "w-full max-w-screen-2xl" }, [
+        _c("div", { staticClass: "flex items-start gap-8" }, [
+          _c("div", { staticClass: "w-1/2 bg-gray-100" }, [
+            _c(
+              "h2",
+              {
+                staticClass:
+                  "text-2xl font-bold mb-4 bg-blue-500 text-white text-center py-2",
+              },
+              [_vm._v("To Do")]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "bg-red-400 p-4 rounded-lg mx-8 mb-4" }, [
+              _vm._v("\n          xxxxxxxxxx\n        "),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "w-1/2 bg-gray-100 p-4" }, [
+            _c("h2", { staticClass: "text-lg font-bold mb-4" }, [
+              _vm._v("Done"),
+            ]),
+            _vm._v(" "),
+            _c("ul", { staticClass: "list-disc pl-6" }, [
+              _c("li", { staticClass: "mb-2" }, [
+                _c("div", { staticClass: "flex items-center" }, [
+                  _c("input", {
+                    staticClass: "form-checkbox h-4 w-4 text-blue-500",
+                    attrs: { type: "checkbox", checked: "" },
+                  }),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "ml-2 line-through" }, [
+                    _vm._v("Task 7"),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "mb-2" }, [
+                _c("div", { staticClass: "flex items-center" }, [
+                  _c("input", {
+                    staticClass: "form-checkbox h-4 w-4 text-blue-500",
+                    attrs: { type: "checkbox", checked: "" },
+                  }),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "ml-2 line-through" }, [
+                    _vm._v("Task 8"),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "mb-2" }, [
+                _c("div", { staticClass: "flex items-center" }, [
+                  _c("input", {
+                    staticClass: "form-checkbox h-4 w-4 text-blue-500",
+                    attrs: { type: "checkbox", checked: "" },
+                  }),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "ml-2 line-through" }, [
+                    _vm._v("Task 9"),
+                  ]),
+                ]),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "w-1/2 bg-gray-100 p-4" }, [
+            _c("h2", { staticClass: "text-lg font-bold mb-4" }, [
+              _vm._v("Done"),
+            ]),
+            _vm._v(" "),
+            _c("ul", { staticClass: "list-disc pl-6" }, [
+              _c("li", { staticClass: "mb-2" }, [
+                _c("div", { staticClass: "flex items-center" }, [
+                  _c("input", {
+                    staticClass: "form-checkbox h-4 w-4 text-blue-500",
+                    attrs: { type: "checkbox", checked: "" },
+                  }),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "ml-2 line-through" }, [
+                    _vm._v("Task 7"),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "mb-2" }, [
+                _c("div", { staticClass: "flex items-center" }, [
+                  _c("input", {
+                    staticClass: "form-checkbox h-4 w-4 text-blue-500",
+                    attrs: { type: "checkbox", checked: "" },
+                  }),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "ml-2 line-through" }, [
+                    _vm._v("Task 8"),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "mb-2" }, [
+                _c("div", { staticClass: "flex items-center" }, [
+                  _c("input", {
+                    staticClass: "form-checkbox h-4 w-4 text-blue-500",
+                    attrs: { type: "checkbox", checked: "" },
+                  }),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "ml-2 line-through" }, [
+                    _vm._v("Task 9"),
+                  ]),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+]
 render._withStripped = true
 
 
@@ -17121,7 +17304,7 @@ module.exports = index_cjs;
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/main.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/css/app.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
