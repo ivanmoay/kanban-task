@@ -35,4 +35,5 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::middleware('api')->group(function () {
     Route::resource('tasks', TaskController::class);
+    //Route::post('tasks', 'TaskController@store');
 });

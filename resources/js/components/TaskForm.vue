@@ -67,18 +67,12 @@ export default{
         },
         storeTask(){
             this.axios
-            .post('/api/tasks', this.task)
-            .then(response => {
-                console.log(response.data)
-            })
-            // this.axios
-            //         .post('http://localhost:8000/api/post/add', this.post)
-            //         .then(response => (
-            //             this.$router.push({name: 'home'})
-            //             // console.log(response.data)
-            //         ))
-            //         .catch(error => console.log(error))
-            //         .finally(() => this.loading = false)
+                .post('/api/tasks', this.task)
+                .then(response =>{
+                    this.$emit('close')
+                    //this.$router.push({name: 'Home'})
+                })
+                .catch(err=> console.log(err))
         }
     }
 }
