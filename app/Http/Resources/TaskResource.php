@@ -17,6 +17,7 @@ class TaskResource extends JsonResource
         // return parent::toArray($request);        
         return [
             'id' => $this->id,
+            'title' => $this->title,
             'description' => $this->description,
             'due_date' => $this->due_date->toDateString(),
             'status' => $this->status,
@@ -24,14 +25,4 @@ class TaskResource extends JsonResource
             'order_num' => $this->order_num
         ];
     }
-
-    // public function toArray($request)
-    // {
-    //     return [
-    //         'id' => $this->id,
-    //         'title' => $this->title,
-    //         'note' => $this->note,
-    //         'created_at' => $this->created_at->toDateString()
-    //     ];
-    // }
 }

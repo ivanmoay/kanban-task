@@ -24,6 +24,7 @@ class StoreTaskRequest extends FormRequest
     public function rules()
     {
         return [
+            'title' => 'required',
             'description' => 'required',
             'due_date' => 'required',
             'status' => 'required',

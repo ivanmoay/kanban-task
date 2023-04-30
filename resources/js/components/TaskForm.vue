@@ -66,11 +66,10 @@ export default{
             this.$emit('close')
         },
         storeTask(){
-            console.log('store')
             this.axios
             .post('/api/tasks', this.task)
             .then(response => {
-                console.log('data saved')
+                console.log(response.data)
             })
             // this.axios
             //         .post('http://localhost:8000/api/post/add', this.post)
