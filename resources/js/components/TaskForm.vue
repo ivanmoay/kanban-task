@@ -34,7 +34,18 @@
                     </div>
                     
                     <div v-if="isEditTask">
-                        <div class="flex items-start items-center mb-4">
+                        
+                        <select 
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            v-model="task.board_no"
+                        >
+                            <option selected>Choose a Board</option>
+                            <option value="1">To Do</option>
+                            <option value="2">In-Progress</option>
+                            <option value="3">Done</option>
+                        </select>
+
+                        <div class="flex items-start items-center mb-4 mt-4">
                             <input 
                                 aria-describedby="checkbox-2" 
                                 type="checkbox" 
