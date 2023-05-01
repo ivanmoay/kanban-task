@@ -14,6 +14,9 @@
       </header>
 
       <div class="flex items-start gap-8">
+
+        
+
         <div class="w-1/2 bg-gray-100">
           <div class="flex items-center bg-blue-500 mb-4 py-2 group">
             <h2 class="text-2xl text-white text-center flex-1">To Do</h2>
@@ -77,12 +80,14 @@
 <script>
 import TaskForm from '../components/TaskForm.vue'
 import Task from '../components/Task.vue'
+import draggable from 'vuedraggable'
 
 export default {
   name: 'Home',
   components: {
     TaskForm,
     Task,
+    draggable
   },
   data() {
     return {
@@ -118,6 +123,9 @@ export default {
       this.taskIDToEdit = id
       this.isEditTask = true
       this.showTaskForm = true;
+    },
+    onChange(e){
+      console.log(e)
     }
   }
 }

@@ -11,6 +11,7 @@ class TaskController extends Controller
 {
     public function index()
     {
+        //$tasks = Task::where('board_no', $board_no)->toArray();
         $tasks = Task::all()->toArray();
 
         return $tasks;
