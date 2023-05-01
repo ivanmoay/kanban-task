@@ -18,9 +18,9 @@ class CreateTasksTable extends Migration
             $table->string('title');
             $table->string('description');
             $table->date('due_date');
-            $table->integer('status');
-            $table->integer('board_no');
-            $table->integer('order_num');
+            $table->integer('status')->default(0);
+            $table->integer('board_no')->default(1);
+            $table->integer('order_num')->default(1);
             $table->timestamps();
         });
     }

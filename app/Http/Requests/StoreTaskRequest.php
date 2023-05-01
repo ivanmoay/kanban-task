@@ -16,20 +16,12 @@ class StoreTaskRequest extends FormRequest
         return true;
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array
-     */
     public function rules()
     {
         return [
             'title' => 'required',
             'description' => 'required',
-            'due_date' => 'required',
-            'status' => 'required',
-            'board_no' => 'required',
-            'order_num' => 'required',
+            'due_date' => 'required'
         ];
     }
 }

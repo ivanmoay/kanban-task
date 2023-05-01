@@ -11,7 +11,9 @@ class TaskController extends Controller
 {
     public function index()
     {
-        //
+        $tasks = Task::all()->toArray();
+
+        return $tasks;
     }
 
     public function create()
@@ -21,49 +23,23 @@ class TaskController extends Controller
 
     public function store(Request $request)
     {
-        $task = new Task(
-            [
-                'title' => $request->input('title'), 
-                'description' => $request->input('description'),
-                'due_date' => $request->input('due_date'), 
-                'status' => 1,
-                'board_no' => 1,
-                'order_num' => 1
-            ]
-        );
-        $task->save();
-        return response()->json('Task created.');
-        // $formFields = $request->validate([
-        //     'brand' => ['required', Rule::unique('brands', 'brand')]
-        // ]);        
+        //TODO max length
+        $formFields = $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'due_date' => 'required'
+        ]);   
 
-        // $formFields['brand'] = ucwords($formFields['brand']);
-        // Brand::create($formFields);
+        $formFields['title'] = ucwords($formFields['title']);
+        $formFields['board_no'] = $request->board_no;
 
-        // $formFields = $request->validate([
-        //     'title' => 'required',
-        //     'description' => 'required',
-        //     'due_date' => 'required',
-        //     // 'status' => 'required',
-        //     // 'board_no' => 'required',
-        //     // 'order_num' => 'required'
-        // ]);   
-
-        // $formFields['status'] = 1;
-        // $formFields['board_no'] = 1;
-        // $formFields['order_num'] = 1;
-
-        // $task = Task::create($formFields);
-
-        // return new TaskResource($task);
-
-        // $task = Task::create($request->validated());
-        // return new TaskResource($task);
+        $task = Task::create($formFields);
+        return new TaskResource($task);
     } 
 
     public function show(Task $task)
     {
-        //
+        return new TaskResource($task);
     }
 
     public function edit(Task $task)
@@ -73,11 +49,24 @@ class TaskController extends Controller
 
     public function update(Request $request, Task $task)
     {
-        //
+        $formFields = $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'due_date' => 'required'
+        ]);   
+
+        $formFields['title'] = ucwords($formFields['title']);
+        $formFields['status'] = $request->status ?? 0;
+
+        $task->update($formFields);
+
+        return new TaskResource($task);
     }
 
     public function destroy(Task $task)
     {
-        //
+        $task->delete();
+
+        return response()->noContent();
     }
 }
